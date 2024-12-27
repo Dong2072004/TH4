@@ -3,31 +3,28 @@
 
 @section('main')
     <div class="container">
-        <h1></h1>
+        <h1>Sua</h1>
 
-        <form action="{{ route('readers.update', $books) }}" method="POST">
+        <form action="{{ route('readers.update', $readers) }}" method="POST">
             @csrf
             @method('PUT')
             <div class="form-group">
-                <label for="name">Têm sách:</label>
-                <input type="text" class="form-control" id="name" name="name" value="{{ $reader->name }}">
+                <label for="name">Têm nguoi doc:</label>
+                <input type="text" class="form-control" id="name" name="name" value="{{ $readers->name }}">
             </div>
             <div class="form-group">
-                <label for="author">Tác giả:</label>
-                <textarea class="form-control" id="author" name="author" required>{{ $books->author }}</textarea>
+                <label for="birthday">ngay sinh:</label>
+                <input type="date" class="form-control" id="birthday" name="birthday"  value="{{$readers->birthday}}">
             </div>
             <div class="form-group">
-                <label for="category">Thể loại:</label>
-                <textarea class="form-control" id="category" name="category">{{ $books->category }}</textarea>
+                <label for="address">Dia chi:</label>
+                <textarea class="form-control" id="address" name="address">{{ $readers->address }}</textarea>
             </div>
             <div class="form-group">
-                <label for="year">Năm xuất bản:</label>
-                <textarea class="form-control" id="year" name="year">{{ $books->year }}</textarea>
+                <label for="phone">So dien thoai:</label>
+                <textarea class="form-control" id="phone" name="phone">{{ $readers->phone }}</textarea>
             </div>
-            <div class="form-group">
-                <label for="quantity">Số lượng tồn:</label>
-                <textarea class="form-control" id="quantity" name="quantity">{{ $books->quantity }}</textarea>
-            </div>
+
             <button type="submit" class="btn btn-primary">Lưu</button>
         </form>
 

@@ -34,7 +34,6 @@ class ReaderController extends Controller
         $reader = Reader::find($id);
             return view('readers.edit', compact('reader'));
 
-
     }
     public function update(Request $request, string $id){
         $validate = $request->validate([
