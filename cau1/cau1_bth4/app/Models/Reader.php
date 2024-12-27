@@ -14,9 +14,8 @@ class Reader extends Model
         'address',
         'phone',
     ];
-public function borrows()
-{
-    return $this->hasMany(Borrow::class);
+public function readers(){
+    return $this->hasMany(Reader::class);
 }
 }
 

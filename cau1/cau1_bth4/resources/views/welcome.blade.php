@@ -17,7 +17,7 @@
             <a class="nav-link active" aria-current="page" href="{{ route('books.index') }}">Trang quản lý sách</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('reads.index') }}">Trang quản lý người đọc</a>
+            <a class="nav-link" href="{{ route('readers.index') }}">Trang quản lý người đọc</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="{{ route('borrows.index') }}">Trang quản lý mượn sách</a>
