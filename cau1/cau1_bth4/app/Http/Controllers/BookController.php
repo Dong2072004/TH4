@@ -12,7 +12,9 @@ class BookController extends Controller
         return view('books.index', compact('books'));
     }
     public function create(){
+
         return view('books.add');
+
     }
     public function store(Request $request){
         $validate = $request->validate([
