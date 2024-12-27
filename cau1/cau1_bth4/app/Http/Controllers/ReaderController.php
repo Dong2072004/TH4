@@ -31,8 +31,8 @@ class ReaderController extends Controller
         return view('readers.show', compact('reader'));
     }
     public function edit(string $id){
-        $reader = Reader::find($id);
-            return view('readers.edit', compact('reader'));
+        $readers = Reader::find($id);
+            return view('readers.edit', compact('readers'));
 
     }
     public function update(Request $request, string $id){
@@ -42,14 +42,14 @@ class ReaderController extends Controller
             'address' => 'required|string|max:255',
             'phone' => 'required|string|max:255',
         ]);
-        $reader = Reader::find($id);
-        $reader->update($request->all());
+        $readers = Reader::find($id);
+        $readers->update($request->all());
         return redirect()->route('readers.index');
 
     }
     public function destroy(string $id){
-        $reader = Reader::find($id);
-        $reader->delete();
+        $readers = Reader::find($id);
+        $readers->delete();
         return redirect()->route('readers.index');
 
     }

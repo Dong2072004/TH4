@@ -9,7 +9,7 @@
             @csrf
             @method('PUT')
             <div class="form-group">
-                <label for="name">Têm nguoi doc:</label>
+                <label for="name">Tên nguoi doc:</label>
                 <input type="text" class="form-control" id="name" name="name" value="{{ $readers->name }}">
             </div>
             <div class="form-group">

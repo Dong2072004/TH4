@@ -9,7 +9,7 @@
             @csrf
             @method('PUT')
             <div class="form-group">
-                <label for="name">Têm sách:</label>
+                <label for="name">Tên sách:</label>
                 <input type="text" class="form-control" id="name" name="name" value="{{ $books->name }}">
             </div>
             <div class="form-group">
